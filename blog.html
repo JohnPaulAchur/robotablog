@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Robota’s Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+      * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        font-family: "Poppins", Helvetica, sans-serif;
+        background-color: white;
+      }
+
+      button:focus-visible {
+        outline: 2px solid #4a90e2 !important;
+        outline: -webkit-focus-ring-color auto 5px !important;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      :root {
+        --extendedcool-gray600: rgba(75, 85, 99, 1);
+        --defaultgray-50: rgba(249, 250, 251, 1);
+        --text-lg-font-size: 18px;
+        --text-lg-line-height: 28px;
+        --text-base-font-size: 16px;
+        --text-base-line-height: 24px;
+      }
+
+        /* Container */
+        .frame {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 30px 100px; 
+            margin: 0 auto;
+            background-color: rgba(224, 231, 255, 0.2);
+            /* flex-wrap: wrap; */
+        }
+
+      /* Left Column */
+      .frame .div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 24px;
+        /* flex: 0 0 auto; */
+        width: 50%;
+        /* padding: 0 30px; */
+      }
+
+      .frame .text-wrapper {
+        font-family: "Inter-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #66b79e;
+        font-size: 48px;
+        line-height: 54px;
+        /* width: 80%; */
+      }
+
+      .frame .p {
+        font-size: var(--text-lg-font-size);
+        line-height: var(--text-lg-line-height);
+        font-weight: 400;
+        color: var(--extendedcool-gray600);
+        /* width: 80%; */
+      }
+
+      /* Button */
+      .button-wrapper {
+        display: flex;
+        gap: 10px;
+        /* width: 523px; */
+      }
+
+      .button {
+        all: unset;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        background-color: #884fba;
+        border-radius: 58px;
+        cursor: pointer;
+        box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      }
+
+      .button-2 {
+        font-size: var(--text-base-font-size);
+        line-height: var(--text-base-line-height);
+        font-weight: 600;
+        color: var(--defaultgray-50);
+        white-space: nowrap;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      
+
+      /* Right Column - Images */
+      .div-2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 50%;
+        /* flex: 1; */
+        /* overflow-x: auto;  */
+        flex-wrap: nowrap;
+      }
+
+      /* Apply 20px border-radius to all images */
+      .rectangle,
+      .img,
+      .rectangle-2,
+      .rectangle-3 {
+        object-fit: cover;
+        border-radius: 20px; /* 20px border-radius */
+        /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.425); */box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.425);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .rectangle:hover,
+      .img:hover,
+      .rectangle-2:hover,
+      .rectangle-3:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* .rectangle {
+        width: 144px;
+        height: 251px;
+        margin-left: -4px;
+      }
+
+      .img {
+        width: 164px;
+        height: 301px;
+      }
+
+      .rectangle-2 {
+        width: 189px;
+        height: 343px;
+        margin-bottom: -12px;
+      }
+
+      .rectangle-3 {
+        width: 144px;
+        height: 251px;
+        margin-right: -12px;
+      } */
+
+      .div-2 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* First image *//* Fifth image */
+.div-2 img:nth-child(1),.div-2 img:nth-child(5)  {
+  width: 144px;
+  height: 251px;
+  margin-left: -4px;
+}
+
+/* Second image *//* Fourth image */
+.div-2 img:nth-child(2),.div-2 img:nth-child(4) {
+  width: 164px;
+  height: 301px;
+}
+
+/* Third image */
+.div-2 img:nth-child(3) {
+  width: 189px;
+  height: 343px;
+  margin-bottom: -12px;
+}
+
+
+
+
+
+/* Fourth image */
+/* .div-2 img:nth-child(4) {
+  width: 164px;
+  height: 301px;
+}
+ */
+
+/* .div-2 img:nth-child(5) {
+  width: 144px;
+  height: 251px;
+  margin-right: -12px;
+} */
+
+
+
+
+
+
+/* Base (≤ 1398px) */
+.div-2 img:nth-child(1),
+.div-2 img:nth-child(5) {
+  width: 108px;
+  height: 188px;
+  margin-left: -4px;
+}
+
+.div-2 img:nth-child(2),
+.div-2 img:nth-child(4) {
+  width: 123px;
+  height: 226px;
+}
+
+.div-2 img:nth-child(3) {
+  width: 142px;
+  height: 257px;
+  margin-bottom: -12px;
+}
+
+/* ↓ 1298px */
+@media (max-width: 1298px) {
+  .div-2 img:nth-child(1),
+  .div-2 img:nth-child(5) {
+    width: 98px;
+    height: 170px;
+  }
+
+  .div-2 img:nth-child(2),
+  .div-2 img:nth-child(4) {
+    width: 112px;
+    height: 206px;
+  }
+
+  .div-2 img:nth-child(3) {
+    width: 130px;
+    height: 235px;
+  }
+}
+
+/* ↓ 1198px */
+@media (max-width: 1198px) {
+  .div-2 img:nth-child(1),
+  .div-2 img:nth-child(5) {
+    width: 88px;
+    height: 153px;
+  }
+
+  .div-2 img:nth-child(2),
+  .div-2 img:nth-child(4) {
+    width: 102px;
+    height: 188px;
+  }
+
+  .div-2 img:nth-child(3) {
+    width: 118px;
+    height: 213px;
+  }
+}
+
+/* ↓ 1098px */
+@media (max-width: 1098px) {
+  .div-2 img:nth-child(1),
+  .div-2 img:nth-child(5) {
+    width: 78px;
+    height: 136px;
+  }
+
+  .div-2 img:nth-child(2),
+  .div-2 img:nth-child(4) {
+    width: 92px;
+    height: 169px;
+  }
+
+  .div-2 img:nth-child(3) {
+    width: 106px;
+    height: 192px;
+  }
+}
+
+
+
+/* ↓ 1000px — Hide 1st and 5th */
+/* ↓ 1000px — Hide 1st and 5th */
+/* ↓ 1000px — Hide 1st and 5th */
+
+@media (max-width: 1400px) {
+  .div-2 img:nth-child(1){
+    display: none;
+  }
+}
+
+
+/* ↓ 1000px — Hide 1st and 5th */
+@media (max-width: 1000px) {
+  .div-2 img:nth-child(1),
+  .div-2 img:nth-child(5) {
+    display: none;
+  }
+/* ↓ 1000px — Hide 1st and 5th */
+/* ↓ 1000px — Hide 1st and 5th */
+/* ↓ 1000px — Hide 1st and 5th */
+
+  .div-2 img:nth-child(2),
+  .div-2 img:nth-child(4) {
+    width: 84px;
+    height: 154px;
+  }
+
+  .div-2 img:nth-child(3) {
+    width: 96px;
+    height: 174px;
+  }
+}
+
+/* ↓ 900px */
+@media (max-width: 900px) {
+  .div-2 img:nth-child(2),
+  .div-2 img:nth-child(4) {
+    width: 74px;
+    height: 136px;
+  }
+
+  .div-2 img:nth-child(3) {
+    width: 86px;
+    height: 156px;
+  }
+}
+
+/* ↓ 800px */
+@media (max-width: 800px) {
+  .div-2 img:nth-child(2),
+  .div-2 img:nth-child(4) {
+    width: 64px;
+    height: 118px;
+  }
+
+  .div-2 img:nth-child(3) {
+    width: 76px;
+    height: 139px;
+  }
+}
+
+/* ↓ 700px */
+@media (max-width: 700px) {
+  .div-2 img:nth-child(2),
+  .div-2 img:nth-child(4) {
+    width: 54px;
+    height: 100px;
+  }
+
+  .div-2 img:nth-child(3) {
+    width: 66px;
+    height: 121px;
+  }
+}
+
+/* ↓ 600px (mobile fallback — full-width stacked) */
+/* @media (max-width: 600px) {
+  .div-2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .div-2 img:nth-child(2),
+  .div-2 img:nth-child(3),
+  .div-2 img:nth-child(4) {
+    width: 90%;
+    height: auto;
+    margin: 10px 0;
+  }
+} */
+
+
+/* ↓ 600px — final reduced size */
+@media (max-width: 600px) {
+  .div-2 img:nth-child(2),
+  .div-2 img:nth-child(4) {
+    width: 44px;
+    height: 82px;
+  }
+
+  .div-2 img:nth-child(3) {
+    width: 56px;
+    height: 104px;
+  }
+}
+
+
+      #arrow-down {
+        display: inline-block;
+        animation: bounce 3s infinite ease-in-out;
+      }
+
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(10px); /* Adjust to your preferred bounce height */
+        }
+      }
+
+
+
+     
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+        <!-- <div class="col-md-6">
+
+        </div> -->
+      <div class="div">
+        <div class="text-wrapper">Welcome to Robota’s Blog!</div>
+        <p class="p">
+            Stay informed with the latest STEM training, resources, and articles to keep ahead in the ever-evolving field.
+          <!-- Stay updated with the latest STEM training, resources, and insightful articles to help you stay ahead in the rapidly evolving world of STEM. -->
+          <!-- Stay updated with the latest STEM training, resources, and insightful articles that will help you stay ahead in the rapidly evolving world of STEM. -->
+          <!-- Stay updated with the latest STEM training programs, cutting-edge resources, and insightful articles that will help you stay ahead in the rapidly evolving world of STEM. -->
+        </p>
+        <div class="button-wrapper">
+          <a class="button" href="#">
+            <span class="button-2"><span id="arrow-down">⬇</span> Scroll To Discover  </span>
+          </a>
+        </div>
+      </div>
+      <div class="div-2">
+        <img class="rectangle" src="https://images.pexels.com/photos/15470542/pexels-photo-15470542/free-photo-of-close-up-of-semiconnectors.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Rectangle 1" />
+        <img class="img" src="https://robotastemtraining.com/uploads/gallery/media/1736426940-521933177677fc5bce2b54!IMG_2782.JPG" alt="Rectangle 2" />
+        <img class="rectangle-2" src="https://robotastemtraining.com/uploads/gallery/media/1740415339-86019537667bca16b7b576!inter%20women%20day.png?1741343659" alt="Rectangle 3" />
+        <img class="img" src="https://robotastemtraining.com/uploads/gallery/media/1741001127-96682605867c591a75416e!engineering%20week.png?1741001142" alt="Rectangle 4" />
+        <img class="rectangle-3" src="https://robotastemtraining.com/uploads/gallery/media/1736609978-1088549708678290bac698d!2.jpg" alt="Rectangle 5" />
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>
