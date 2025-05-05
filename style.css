@@ -622,4 +622,8 @@ margin-right: -12px;
     background-color: #6B7280;
     clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
   }
+
   
+  .blog-section{
+    padding: 0 4rem;
+  }
