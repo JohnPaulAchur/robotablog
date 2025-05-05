@@ -394,10 +394,7 @@ margin-right: -12px;
     height: 143px;
   }
 
-  .constrain .input-elevated{
-    
-    width: 100%;
-    } 
+  
     
 }
 
@@ -428,17 +425,16 @@ margin-right: -12px;
     width: 100%;
     padding: 60px;
     /* margin: 0 auto; */
-    margin-top: -100px;
+    /* margin-top: -100px; */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  input{
-    margin-bottom: 40px;
-  }
-  
   .input-elevated{
+    position: absolute;
+    top: -035px;
   font-size: 16px;
   line-height: 3.5;
   border: none;
@@ -462,3 +458,168 @@ margin-right: -12px;
     outline: none;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.16);
   }
+
+
+  /* @media screen and (max-width: 600px) {
+  .input-elevated {
+    width: 90%;
+    font-size: 18px;
+    padding: 0.75em 1em 0.75em 3em;
+    background-position: 15px 15px;
+    background-size: 18px 18px;
+  }
+} */
+.search-text{
+    font-size: var(--text-lg-font-size);
+  line-height: var(--text-lg-line-height);
+  font-weight: 400;
+  color: grey;
+  font-family: "Poppins", Helvetica, sans-serif;
+
+}
+
+
+
+
+
+.container2 {
+    width: 100%;
+    max-width: 79.625rem; /* 1274px */
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+  }
+  
+  .filter-group2 {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.625rem; /* 10px */
+    display: flex;
+  }
+  
+  .tag-active2 {
+    padding: 0.625rem 1rem; /* 10px top/bottom, 16px left/right */
+    background: #90DEC1;
+    border-radius: 0.5rem; /* 8px */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  .tag-title2 {
+    color: #1F2937;
+    font-size: 0.875rem; /* 14px */
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    line-height: 1.25rem; /* 20px */
+    word-wrap: break-word;
+  }
+  
+  .tag-count2 {
+    color: #9CA3AF;
+    font-size: 0.875rem;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    line-height: 1.25rem;
+    word-wrap: break-word;
+  }
+  
+  .tag2 {
+    padding: 0.625rem 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    outline: 0.063rem solid #F3F4F6; /* 1px */
+    outline-offset: -0.063rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #6B7280;
+    font-size: 0.875rem;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 1.25rem;
+    word-wrap: break-word;
+  }
+  
+  .sort-option2 {
+    padding: 0.625rem 1rem;
+    border-radius: 0.5rem;
+    outline: 0.063rem solid #E5E7EB;
+    outline-offset: -0.063rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem; /* 20px */
+    display: flex;
+  }
+  
+  .sort-label2 {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #6B7280;
+    font-size: 0.875rem;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 1.25rem;
+    word-wrap: break-word;
+  }
+  
+  .sort-icon-wrapper2 {
+    width: 0.563rem;  /* 9px */
+    height: 0.375rem; /* 6px */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .sort-icon2 {
+    width: 0.457rem;   /* 7.31px */
+    height: 0.263rem;  /* 4.20px */
+    left: 0.053rem;    /* 0.84px */
+    top: 0.056rem;     /* 0.90px */
+    position: absolute;
+    outline: 0.094rem solid #6B7280;  /* 1.5px */
+    outline-offset: -0.047rem;        /* -0.75px */
+  }
+
+  
+  .sort-select-wrapper2 {
+    border-radius: 0.5rem;
+    outline: 0.063rem solid #E5E7EB;
+    outline-offset: -0.063rem;
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 1rem;
+    background: white;
+  }
+  
+  .sort-select2 {
+    border: none;
+    background: transparent;
+    font-size: 0.875rem; /* 14px */
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    color: #6B7280;
+    line-height: 1.25rem;
+    appearance: none;
+    padding-right: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Optional: custom dropdown arrow */
+  .sort-select-wrapper2 {
+    position: relative;
+  }
+  
+  .sort-select2::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.5rem;
+    height: 0.25rem;
+    background-color: #6B7280;
+    clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+  }
+  
