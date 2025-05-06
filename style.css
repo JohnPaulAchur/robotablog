@@ -677,7 +677,7 @@ margin-right: -12px;
 
 
   .blog-section{
-    padding: 0 4rem;
+    padding: 0 5rem;
     flex-direction: column;
   }
 
@@ -810,6 +810,11 @@ margin-right: -12px;
     .card-content3 {
       padding: 1rem;
     }
+
+    .blog-section{
+        padding: 0 2rem;
+        flex-direction: column;
+      }
   }
 
 
